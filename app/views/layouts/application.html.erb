@@ -7,8 +7,33 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+ <header>
+  
+  
+  <div id="navcontainer">
+  <img src="/assets/logo.png" height="200" />
+  <h1 id="header">Jacob Snowden</h1>
+<ul id="navlist">
 
+
+<li data-pane="reel" class="selected" >reel</li>
+<li data-pane="videos">videos</li>
+
+</ul>
+	
+</div>
+	<div id="contact">
+		<p>Email me at:</p>
+		<address><a href="mailto:snowdencinematography@gmail.com">snowdencinematography@gmail.com</a></address>
+	</div>
+
+  </header>
+  <div id="main" role="main">
 <%= yield %>
+</div>
+  <footer>
+    More videos at <a href="http://www.youtube.com/cloudcityfilms">youtube.com/cloudcityfilms</a>
+  </footer>
 
 </body>
 </html>
