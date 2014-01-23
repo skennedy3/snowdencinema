@@ -28,7 +28,10 @@
 	</div>
 
   </header>
-  <div id="main" role="main">
+  <div id="main" role="main"
+  <% flash.each do |key, value| %>
+        <div class="alert alert-<%= key %>"><%= value %></div>
+      <% end %>
 <%= yield %>
 </div>
   <footer>
