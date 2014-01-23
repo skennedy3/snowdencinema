@@ -18,7 +18,14 @@
 
 <li data-pane="reel" class="selected" >reel</li>
 <li data-pane="videos">videos</li>
-
+<% if signed_in? %>
+  <%= link_to "Sign Out", signout_path, method: "delete"  %>
+  <%= link_to "Profile", current_user %>
+<% else %>
+<li>
+  <%= link_to "Sign in", signin_path%>
+</li>
+<% end %>
 </ul>
 	
 </div>
